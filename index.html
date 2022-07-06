@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Donna Monique</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="extraStyle.css">
+    <script defer src="script.js"></script>
+  </head>
+  <body class="w3-content" style="max-width:1200px">
+
+  <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+    <div class="w3-container w3-display-container w3-padding-16">
+      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+      <a href="index.html"><img src="img/logo.png" alt="Logo da loja Donna Monique" class="logo"></a>
+    </div>
+    <div class="w3-padding-64 w3-large w3-text-grey" id="sideMenu" style="font-weight:bold"></div>
+    <!-- <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+    <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a> -->
+  </nav>
+
+  <header class="w3-bar w3-top w3-hide-large w3-grey w3-xlarge">
+    <img src="img/logo.png" alt="Logo da loja Donna Monique" class="logo-mobile">
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </header>
+
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <div class="w3-main" style="margin-left:250px">
+
+    <div class="w3-hide-large" style="margin-top:83px"></div>
+    
+    <header class="w3-container w3-xlarge">
+      <p class="w3-left" id="categoryTitle">Principais produtos</p>
+      <p class="w3-right">
+        <i class="fa fa-shopping-cart w3-margin-right" onclick="openCart()"></i>
+        <i class="fa fa-search"></i>
+      </p>
+      <div id="cart" class="w3-modal">
+        <div class="w3-modal-content cart">
+          <div class="w3-container">
+            <span onclick="closeCart()" class="w3-button w3-display-topright">&times;</span>
+            <h3 class="cartTitle">Carrinho <i class="fa fa-shopping-cart w3-margin-right"></i></h3>
+            <form onsubmit="finishCart()" id="cartItems"></form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="w3-row w3-grayscale productBox" id="productList"></div>
+    
+    <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+      <div class="w3-row-padding">
+        <div class="w3-col s4">
+          <h4>Login</h4>
+          <p>Faça login ou cadastre-se para realizar compras.</p>
+          <form method="POST" id="loginForm">
+            <p><input class="w3-input w3-border" type="text" placeholder="E-mail" name="email" required></p>
+            <p><input class="w3-input w3-border" type="password" placeholder="Senha" name="password" required></p>
+            <input type="submit" value="Entrar" class="w3-button w3-block w3-black" id="loginButton">
+          </form>
+        </div>
+
+        <div class="w3-col s4">
+          <h4>Sobre</h4>
+          <p><a href="#">Sobre nós</a></p>
+          <p><a href="#">Encontre a loja</a></p>
+          <p><a href="#">Entrega</a></p>
+          <p><a href="#">Formas de pagamento</a></p>
+          <p><a href="#">Regras de desconto</a></p>
+          <p><a href="#">Ajuda</a></p>
+        </div>
+
+        <div class="w3-col s4 w3-justify">
+          <h4>Donna Monique</h4>
+          <p><i class="fa fa-fw fa-map-marker"></i> Itapetininga</p>
+          <p><i class="fa fa-fw fa-phone"></i> (15) 99999-9999</p>
+          <p><i class="fa fa-fw fa-envelope"></i> sac@dnmnq.com.br</p>
+          <h4>Aceitamos</h4>
+          <p><i class="fa fa-fw fa-cc-visa"></i> Visa</p>
+          <p><i class="fa fa-fw fa-cc-mastercard"></i> MasterCard</p>
+          <br>
+          <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+          <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+          <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+          <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+        </div>
+      </div>
+    </footer>
+
+    <div class="w3-black w3-center w3-padding-24">Site customizado a partir de template da <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+  </div>
+  </body>
+</html>

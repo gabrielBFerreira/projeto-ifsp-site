@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  apache:
+    image: httpd:latest
+    container_name: projeto-ifsp-site
+    ports:
+    - '80:80'
+    volumes:
+    - .:/usr/local/apache2/htdocs
+    extra_hosts:
+    - "donnamonique.com.br:127.0.0.1"
+    hostname: donnamonique.com.br
+    domainname: com.br    

@@ -1,0 +1,84 @@
+.w3-sidebar a {
+  font-family: "Roboto", sans-serif
+}
+
+body,h1,h2,h3,h4,h5,h6,.w3-wide {
+  font-family: "Montserrat", sans-serif;
+}
+
+.logo {
+  width: 80%;
+}
+
+.logo-mobile {
+  width: 50%;
+  margin-left: 5%;
+}
+
+.productBox { 
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+  .productBox {
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+  }
+}
+
+.productPhoto {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+
+.productName {
+  width: 12rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; 
+}
+
+.cart {
+  width: 70%;
+  height: 85%;
+  z-index: 3;
+  background-color: #ffffff;
+  box-shadow: 0px 25px 40px gray;
+}
+
+.cartTitle {
+  padding: 13px;
+}
+
+.cartItem {
+  font-size: 1.2rem;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.cartItem::-webkit-scrollbar {
+  display: none;
+}
+
+.cartItem > .cartItemName {
+  min-width: 300px;
+}
+
+.cartItem > .cartItemProperty {
+  min-width: 200px;
+}
+
+.cartDetails {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cartDetails {
+    font-size: 1.2rem;
+  }
+}
